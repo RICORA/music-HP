@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RICORA MUSIC TEAM | 白昼</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+
+    <!-- Twitter Cardsの設定 -->
+    <meta name="twitter:title" content="白昼" />
+    <meta
+      name="twitter:description"
+      content="RICORA 2020秋M3「白昼」特設サイト"
+    />
+    <meta name="twitter:site" content="@ricora_dtm_dj" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="/hakuchu/jacket.png" />
+
+    <!-- jQueryの設定 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- cssの設定 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Javascriptの設定 -->
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/tracklistfade.js"></script>
+
+    <!-- スムーズスクロールの設定 -->
+    <script>
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          var speed = 500;
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top - 80;
+          $("html, body").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body id="ground">
+    <!-- ロード画面 -->
+    <div id="loading">
+      <div id="loading_content">
+        <div id="loading_icon"></div>
+        <div id="loading_logo">
+          <h1>RICORA MUSIC TEAM</h1>
+          <h2>〜誰も聴いたことのない最高の音を求めて〜</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- 背景 -->
+    <div id="bg_gradation"></div>
+
+    <!-- フローティングメニュー -->
+    <div id="floatmenu">
+      <table class="floatmenu_table">
+        <tbody>
+          <tr>
+            <td>
+              <div id="top_logo">
+                <h1>RICORA MUSIC TEAM</h1>
+                <h2>〜誰も聴いたことのない最高の音を求めて〜</h2>
+              </div>
+            </td>
+            <td>
+              <a href="#top" class="afloatmenu">Top</a>
+            </td>
+            <td>
+              <a href="#informationtop" class="afloatmenu">CD Information</a>
+            </td>
+            <td>
+              <a href="#tracklisttop" class="afloatmenu">Tracklist</a>
+            </td>
+            <td>
+              <a href="#credittop" class="afloatmenu">Credit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- トップ -->
+    <div id="top">
+      <div id="title_bg"></div>
+      <div id="title_text"></div>
+    </div>
+
+    <!-- CD情報 -->
+    <div id="informationtop" class="subtitle">CD Information</div>
+
+    <div id="information">
+      <div id="information_contents" class="clearfix">
+        <div class="information_left">
+          <img src="./jacket.png" />
+        </div>
+        <div class="information_right">
+          <table class="information_table">
+            <tbody>
+              <tr>
+                <td>Title</td>
+                <th>白昼</th>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <th>RICORA MUSIC TEAM</th>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <th>500 yen</th>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <th>2020/10/25</th>
+              </tr>
+              <tr>
+                <td>Place</td>
+                <th>M3-2020秋(web出展)</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- トラックリスト -->
+    <div id="tracklisttop" class="subtitle">TrackList</div>
+
+    <div id="tracklist">
+      <dl>
+        <dt><span>TRACK1</span>Daylight Fantasy</dt>
+        <dd>ろんぽう/うどかつ</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK2</span>Nekonata</dt>
+        <dd>RAMjet</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK3</span>Fly to the future</dt>
+        <dd>蛙。</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK4</span>デザイアド・ディストピア</dt>
+        <dd>MoAI</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK5</span>That time</dt>
+        <dd>ろんぽう</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK6</span>都会村</dt>
+        <dd>いおたす/MoAI</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK7</span>Abend Code</dt>
+        <dd>tsuki</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK8</span>Sunset</dt>
+        <dd>May</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK9</span>Xanadu VoIce ver.5</dt>
+        <dd>平野真司</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK10</span>Secret Chamber</dt>
+        <dd>Tararo</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK11</span>あの日、伝えたいコトバ</dt>
+        <dd>ヒロマグナ</dd>
+      </dl>
+    </div>
+
+    <!-- SoundCloudプレイヤー -->
+    <div id="soundcloudplayer">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLUB8AQVHOX78EFFLHXEtJX--Y3HN9mdr9"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- クレジット -->
+    <div id="credittop" class="subtitle">Credit</div>
+
+    <div id="credit">
+      <div id="credit_contents" class="clearfix">
+        <p>Compose</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>ろんぽう</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>うどかつ</dt>
+            <dd>
+              <a
+                href="https://twitter.com/udokatsu_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>RAMjet</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>蛙。</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>MoAI</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>いおたす</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>tsuki</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>May</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>平野真司</dt>
+            <dd>
+              <a
+                href="https://twitter.com/3xvgz"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/ullucya"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Tararo</dt>
+            <dd>
+              <a
+                href="https://twitter.com/tararo_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/tararo1234"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>ヒロマグナ</dt>
+            <dd>
+              <a
+                href="https://twitter.com/hiromagnaaa"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/hiromagna"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Mastering</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>平野真司</dt>
+            <dd>
+              <a
+                href="https://twitter.com/3xvgz"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/ullucya"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Design/Movie</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>ueharu</dt>
+            <dd></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Web</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>ueharu</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>Tararo</dt>
+            <dd>
+              <a
+                href="https://twitter.com/tararo_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/tararo1234"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Produce</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>RICORA MUSIC TEAM</dt>
+            <dd>
+              <a
+                href="https://twitter.com/ricora_dtm_dj"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a href="/index.html" class="web-link"
+                ><i class="fas fa-link fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- バナー -->
+    <div id="banner">
+      <!-- <a href="/insomnia/insomnia.html"><img src="images/banner.png" width=30%></a> -->
+      <br />
+      <a
+        href="https://twitter.com/share"
+        class="twitter-share-button"
+        data-via="ricora_dtm_dj"
+        data-lang="ja"
+        data-hashtags="riddlecolorofrainbow"
+        >ツイート</a
+      >
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? "http" : "https";
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "twitter-wjs");
+      </script>
+      <p>&copy; 2020 RICORA MUSIC TEAM All Rights Reserved.</p>
+    </div>
+  </body>
+</html>

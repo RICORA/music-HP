@@ -1,0 +1,172 @@
+html
+{
+	min-height: 100%;
+	min-width: 100%;
+}
+
+body
+{
+	background-color: #000000;
+	font-family: Century Gothic;
+	text-align: center;
+	-webkit-text-size-adjust:100%;
+	background-position: center;
+}
+
+a {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+#infromation_back
+{
+	background-color: #00010A;
+	background-position: center;
+	padding: 40px 0 40px 0;
+}
+#information_title
+{
+	font-size: 43px;
+	text-shadow: 2px 2px 1px #191970;
+	
+	width: 400px;
+	border-width : 0px 0px 2px 5px;
+	border-style : solid ;
+	border-color : #F0F0F0;
+	margin-left: 475px;
+}
+
+#jacket
+{
+	border: 5px #191970;
+	display: inline-block;
+	box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+#information_data
+{ 
+	color: #F0F0F0;
+	font-size: 25px;
+	text-shadow: 2px 2px 1px #191970;
+	margin-top: 25px;
+	line-height: 25px
+	padding-bottom: 100px;
+}
+
+#information_line
+{
+	width: 1100px;
+	border-width : 0px 0px 2px 0px;
+	border-color : #F0F0F0;
+	border-style : solid ;
+	margin-top: 40px;
+
+}
+
+#xfd_back
+{
+	background-color: #00011A;
+	background-position: center;
+	padding: 40px 0 40px 0;
+}
+
+#xfd_title
+{
+	font-size: 43px;
+	text-shadow: 2px 2px 1px #191970;
+
+	width: 400px;
+	border-width : 0px 0px 2px 5px;
+	border-style : solid ;
+	border-color : #F0F0F0;
+	 
+
+	margin-left: 475px;
+}
+
+#xfd_sc
+{
+	margin-top: 25px;
+
+}
+
+#tracklist_back
+{
+	background-color: #00012A;
+	background-position: center;
+	padding: 40px 0 40px 0;
+}
+
+#tracklist_title
+{
+	font-size: 43px;
+	text-shadow: 2px 2px 1px #191970;
+
+	width: 400px;
+	border-width : 0px 0px 2px 5px;
+	border-style : solid ;
+	border-color : #F0F0F0;
+
+	margin-left: 475px;
+}
+
+#tracklist
+{
+	margin-top: 40px;
+	color: #F0F0F0;
+	font-size: 30px;
+	text-shadow: 2px 2px 1px #191970;
+	line-height: 17px;
+}
+
+#tracklist_bonus
+{
+	color: #FF4400;
+	font-size: 35px;
+	text-shadow: 2px 2px 1px #191970;
+	line-height: 17px;
+}
+
+#staff_back
+{
+	background-color: #00013A;
+	background-position: center;
+	padding: 40px 0 40px 0;
+}
+
+#staff_title
+{
+	font-size: 43px;
+	text-shadow: 2px 2px 1px #191970;
+
+	width: 400px;
+	border-width : 0px 0px 2px 5px;
+	border-style : solid ;
+	border-color : #F0F0F0;
+
+	margin-left: 475px;
+}
+
+#staff
+{
+	margin-top: 40px;
+	color: #F0F0F0;
+	font-size: 30px;
+	text-shadow: 2px 2px 1px #191970;
+}
+
+#banner
+{
+	background-color: #00014A;
+	padding: 40px 0 40px 0;
+}
+
+#banner_img
+{
+	border: 5px #191970;
+	display: inline-block;
+	box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8);
+}

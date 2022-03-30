@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin:0;
+	padding:0;
+	border:0;
+	line-height:1.3;
+}
+
+body {
+	background-color:#181818;
+	background-image:url(../img/back.png);
+	background-position:center;
+	background-position:top;
+	background-repeat:no-repeat;
+}
+
+/***************
+	Header
+***************/
+
+div#header {
+	width:600px;
+	height:100px;
+	margin:0 auto;
+}
+
+div#header h1 {
+	background-image:url(../img/title.png);
+	background-repeat:no-repeat;
+	width:600px;
+	height:100px;
+	display:block;
+}
+
+div#header h1 span{
+	display:none;
+}
+
+/***************
+	Menu
+***************/
+
+div#menu {
+	font-size:16px;
+	background-color:#000;
+	width:600px;
+	height:30px;
+	margin:0 auto;
+}
+
+div#menu ul {
+	list-style:none;
+}
+
+div#menu ul li {
+	float:left;
+	text-align:center;
+	width:110px;
+	height:30px;
+}
+
+div#menu ul li#mixi {
+	float:right;
+	text-align:center;
+	width:110px;
+	height:30px;
+}
+
+div#menu a {
+	color:#09f;
+	text-decoration:none;
+	display:block;
+	width:110px;
+	height:25px;
+	padding-top:5px;
+}
+
+div#menu a:hover {
+	color:#fff;
+	background-color:#222;
+	height:22px;
+	padding-top:5px;
+	border-bottom:3px solid #333;
+}
+
+div#menu span.highlight {
+	color:#f90;
+	background-color:#333;
+	text-decoration:none;
+	display:block;
+	width:110px;
+	height:22px;
+	padding-top:5px;
+	border-bottom:3px solid #09f;
+}
+
+/***************
+	Contents
+***************/
+
+div#contents {
+	font-size:small;
+	width:600px;
+	margin:10px auto;
+	background-color:#222;
+	padding-bottom:10px;
+}
+
+body#index div#contents {
+}
+
+div#contents h2 {
+	font-size:middium;
+	color:#ddd;
+	vertical-align:middle;
+	background-color:#333;
+	padding:2px 0 2px 15px;
+	margin-bottom:10px;
+}
+
+div#contents p {
+	color:#ddd;
+	line-height:1.8;
+	margin:40px;
+}
+
+div#contents dl {
+	color:#ddd;
+	margin-left:60px;
+	margin-right:40px;
+}
+
+div#contents dl dt {
+	color:#f90;
+	background-image:url(../img/stripe_black.png);
+	clear: left;
+	float: left;
+	margin: 0 0 0.8em;
+	width: 7.5em;
+	border-left: solid 8px #09f;
+	padding-top:0.3em;
+	padding-left: 5px;
+	padding-bottom:0.3em;
+}
+
+div#contents dl dd {
+	background-image:url(../img/stripe_black.png);
+	margin-bottom: 0.8em;
+	margin-left: 7.5em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+}
+
+div#contents div.image {
+	text-align:center;
+}
+
+div#contents div.image img {
+	margin:10px;
+}
+
+div#contents a {
+	color:#0cf;
+}
+
+div#contents a:visited {
+	color:#09f;
+}
+
+div#contents a:hover {
+	color:#3ef;
+}
+
+div#contents table {
+	color:#ddd;
+	width:520px;
+	margin:0 40px;
+}
+
+div#contents table tr {
+	background-image:url(../img/stripe_black.png);
+	height:70px;
+}
+
+div#contents table.playlist td.left {
+	color:#f90;
+	background-image:url(../img/stripe_black.png);
+	border-left: solid 8px #06a;
+	padding:0.6em;
+}
+
+div#contents table.playlist td.left:hover {
+	color:#ddd;
+	background-image:url(../img/stripe_blue.png);
+	border-left: solid 8px #9cf;
+}
+
+div#contents table.playlist td.left div.tune {
+	float:left;
+}
+
+div#contents table.playlist td.left div.time {
+	color:#999;
+	float:right;
+}
+
+div#contents table.playlist td.right {
+	padding-left:0.6em;
+	width:14em;
+}
+
+div#contents table tr td.link_left {
+	width:160px;
+}
+
+div#contents table tr td.link_right {
+	padding:5px;
+}
+
+div#contents table tr td.link_left a {
+	color:#f90;
+	width:155px;
+	height:60px;
+	border-left: solid 8px #06a;
+	padding-top:10px;
+	padding-left: 5px;
+	display:block;
+}
+
+div#contents table tr td.link_left a:hover {
+	color:#ddd;
+	background-image:url(../img/stripe_blue.png);
+	border-left: solid 8px #9cf;
+}
+
+body#discography div#contents table {
+	color:#ddd;
+	width:auto;
+	margin:0 auto;
+}
+
+body#discography div#contents table tr {
+	width:auto;
+	height:auto;
+	padding:0;
+	margin:0;
+}
+
+body#discography div#contents table tr td {
+	text-align:center;
+	width:auto;
+	height:auto;
+	padding:3px;
+	margin:0;
+}
+
+body#discography div#contents table tr td.disc {
+	width:250px;
+	height:250px;
+	padding:5px;
+}
+
+body#discography div#contents table tr td.disc:hover {
+	background-image:url(../img/stripe_blue.png);
+}
+
+/***************
+	Footer
+***************/
+
+div#footer {
+	color:#666;
+	font-size:12px;
+	text-align:center;
+	background-color:#000;
+	width:600px;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+	margin:0 auto 20px;
+}
