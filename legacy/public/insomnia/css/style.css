@@ -1,0 +1,574 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+body {
+    min-width: 990px;
+    padding: 0;
+    margin: 0;
+    font-family: Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+    color: #0c0000;
+    font-size: 13px;
+    font-kerning:normal;
+    line-height: 1.75;
+    letter-spacing: 0.05em;
+    text-align: justify;
+    background-image: url("../images/back.png");
+    background-position: center top;
+    background-size: 50%;
+}
+html,body { height: 100%; }
+
+/*リンク色*/
+a { color: #ffffda; text-decoration: none; transition:0.3s ease-in-out; }
+a:hover { color:#0c0000; }
+a.web-link:hover { color:#ffffda; }
+a.twitter-link:hover { color:#00AAff; }
+a.soundcloud-link:hover { color:#ff4400; }
+
+/*選択色*/
+::selection{ background-color:#006699; color: #ffffff; }
+::-moz-selection{ background-color:#006699; color: #ffffff; }
+
+/*ClearFix*/
+.clear {clear: both;}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/*背景グラデーション*/
+#bg_gradation {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(90deg, #060000d0 5%, 20%, #06000000, 80%, #060000d0 95%);
+    background-size: cover;
+}
+
+#bg_gradation::before {
+    content:"";
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    background-color:  #06000080;
+    background-size: cover;
+    animation: bg-flick 12s linear 5.5s infinite alternate;
+}
+
+@keyframes bg-flick {
+    0%, 15%, 25%, 65%, 75%, 100% {
+        opacity: 0;
+    }
+    20%, 70% {
+        opacity: 1;
+    }
+}
+
+/*幅制限*/
+#width_restriction {
+    min-width: 990px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*ロード画面*/
+#loading {
+    position: fixed;
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+#loading_content {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    height:0;
+    color:#555555;
+    text-align:center;
+    font-family:verdana;
+}
+
+#loading_logo {
+    position:relative;
+    width:300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#loading_logo:before {
+    position: absolute;
+    content: '';
+    background: #ffffff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    animation: logo-wrap 1.5s linear forwards;
+}
+
+@keyframes logo-wrap {
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+#loading_content h1 {
+    position:relative;
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    margin: 0 auto;
+}
+
+#loading_content h2 {
+    position:relative;
+    display:block;
+    font-size:12px;
+    font-weight:normal;
+    margin: -6px auto 0px;
+}
+
+#loading_icon {
+    position:relative;
+    font-size: 10px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #555555;
+    background: linear-gradient(to right, #555555 10%, rgba(0, 0, 0, 0) 42%);
+    position: relative;
+    animation: loadingIcon 1.5s linear infinite;
+}
+#loading_icon:before {
+    width: 50%;
+    height: 50%;
+    background: #555555;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+#loading_icon:after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+@keyframes loadingIcon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+#loading.hide {
+    opacity: 0;
+}
+
+/*サブタイトル*/
+.subtitle {
+    position: relative;
+    width: auto;
+    padding: 5px 0;
+    z-index: 1;
+    background-color: #0c0000;
+    text-align: center;
+    color: #ffffda;
+    font-size: 32px;
+    font-family: century;
+}
+
+/*フローティングメニュー*/
+#floatmenu {
+    float: left;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 80px;
+    background-image: url("../images/menu_back.png");
+    background-color : #0c000080;
+    background-position: center top;
+    background-size: 4%;
+    background-attachment: fixed;
+    transition: 0.3s ease-in-out;
+    filter: drop-shadow(0 0 0.75rem hsl(35, 52%, 20%));
+}
+
+table.floatmenu_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+table.floatmenu_table td {
+    border-style: solid;
+    border-width: 0px 4px;
+    border-color: #000000;
+    width: 160px;
+    height: 80px;
+    padding: 0;
+    font-size:16px;
+}
+
+td.td_right {
+    width: 100%;
+}
+
+#top_logo {
+    position:relative;
+    display:block;
+    width: 280px;
+    height: 60px;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffda;
+    font-family:verdana;
+}
+
+#top_logo h1 {
+    position:relative;
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    margin: 0 auto;
+}
+
+#top_logo h2 {
+    position:relative;
+    display:block;
+    font-size:12px;
+    font-weight:normal;
+    margin: -6px auto 0px;
+}
+
+#menu_right {
+    position: relative;
+    display:block;
+    width:100%;
+    min-width: 280px;
+    height: 80px;
+    text-align: center;
+}
+
+.afloatmenu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.afloatmenu:hover {
+    background-color: #ffffdab0;
+}
+
+#menu_right .afloatmenu:hover {
+    background-color: #ffffdab0;
+}
+
+/*トップ*/
+#top {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    z-index: 1;
+    margin-bottom: -10px;
+    background-position: 0 50%;
+    background-color: #0c0000;
+    background-image: url("../images/top.jpg");
+    background-size: 1440px auto;
+    background-repeat: repeat-x;
+    animation: top-fadein 4s linear 1.5s forwards;
+    overflow: hidden;
+}
+
+@keyframes top-fadein {
+    0% {
+        filter: blur(5px) grayscale(1) brightness(0);
+    }
+    100% {
+        filter: blur(0px) grayscale(0) brightness(1);
+    }
+}
+
+#top:before{
+    content: '';
+    background: inherit;
+    filter: brightness(0.25) blur(5px);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+
+
+#top #title_bg {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2;
+    background-position: center;
+    background-color: #000000;
+    background-image: url("../images/top.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    animation: top-flick 6s linear 5.5s infinite alternate;
+}
+
+@keyframes top-flick {
+    0%, 19%, 21%, 69%, 71%, 73%, 100% {
+        filter: brightness(1);
+    }
+    20%, 70%, 72% {
+        filter: brightness(0.4);
+    }
+}
+
+#top #title_text {
+    position: absolute;
+    z-index: 3;
+    height:100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: bottom 0 right 32px;
+    background-image: url("../images/top_text.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 0.75rem #0c0000);
+}
+
+/*CD情報*/
+#information {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #0c000040;
+    background-position: bottom right;
+    background-image: url("../images/hibi.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+#information_contents {
+    position: relative;
+    width: auto;
+    max-width: 930px;
+    margin: 0 auto;
+}
+.information_left {
+    float: left;
+    position: relative;
+    z-index: 2;
+    margin-right: 30px;
+}
+.information_left img {
+    width: 360px;
+    height: 360px;
+    vertical-align:bottom;
+    border: 5px solid #210600;
+    box-sizing: border-box;
+}
+.information_right {
+    float: left;
+    position: relative;
+    width: 540px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 25px 0 25px 35px;
+    border: 5px solid #210600;
+    box-sizing: border-box;
+    z-index: 2;
+    background: #ffffda80;
+}
+table.information_table {
+    z-index: 3;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+table.information_table td {
+	width: 140px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	background: #210600;
+	color: #ffffda;
+	font-size: 16px;
+	text-align: center;
+}
+table.information_table th {
+	padding: 0 30px;
+	line-height: 2;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*トラックリスト*/
+#tracklist {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+    background-color: #0c000040;
+}
+#tracklist dl {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 70px;
+    margin: 20px;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.8s ease;
+    background: #ffffda80;
+    filter: blur(5px);
+}
+
+#tracklist dl.show{
+    opacity: 1;
+    filter: blur(0px);
+}
+
+#tracklist dt {
+    position: absolute;
+    padding-top: 14px;
+    padding-left: 30px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: century;
+    }
+#tracklist dt span {
+    margin-right:20px;
+    font-size: 18px;
+    font-weight: normal;
+}
+#tracklist dd {
+	padding-top: 25px;
+	padding-right: 30px;
+	text-align: right;
+	font-size: 16px;
+    font-weight: bold;
+}
+
+/*SoundCloudプレイヤー*/
+#soundcloudplayer {
+    width: auto;
+    padding: 20px;
+    z-index: 1;
+    background-color: #0c000040;
+    background-position: bottom right;
+    background-image: url("../images/hibi.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+
+
+/*クレジット*/
+#credit {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+    background-color: #0c000040;
+    background-position: bottom right;
+    background-image: url("../images/hibi.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+
+#credit_contents {
+    position: relative;
+    padding: 10px 20px;
+    margin: 20px;
+    z-index: 2;
+    background-color: #ffffda80;
+}
+
+#credit_contents p{
+    float:left;
+    position: relative;
+    width: 140px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+    z-index: 3;
+	background: #210600;
+	color: #ffffda;
+	font-size: 16px;
+	text-align: center;
+}
+
+#credit_namelist {
+    overflow: hidden;
+    position: relative;
+    padding: 0 20px;
+    width: auto;
+    z-index: 3;
+}
+
+#credit_namelist dl {
+    position: relative;
+    width:100%;
+    height: 48px;
+    border-bottom: 1px solid #210600;
+}
+
+#credit_namelist dt {
+    position: absolute;
+    padding-top: 8px;
+    padding-left: 30px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#credit_namelist dd {
+    padding-top: 0px;
+    padding-right: 10px;
+    text-align: right;
+    color: #000000;
+    font-size: 32px;
+}
+
+/*バナー*/
+#banner {
+    padding: 30px 10px 50px;
+    z-index: 1;
+    background-color: #0c0000;
+    text-align: center;
+    color: #ffffda;
+}

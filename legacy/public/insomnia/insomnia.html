@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RICORA MUSIC TEAM | Insomnia</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+
+    <!-- Twitter Cardsの設定 -->
+    <meta name="twitter:title" content="Insomnia" />
+    <meta
+      name="twitter:description"
+      content="RICORA 2019秋M3「Insomnia」特設サイト"
+    />
+    <meta name="twitter:site" content="@ricora_dtm_dj" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="/insomnia/images/jacket.png" />
+
+    <!-- jQueryの設定 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- cssの設定 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Javascriptの設定 -->
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/tracklistfade.js"></script>
+
+    <!-- スムーズスクロールの設定 -->
+    <script>
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          var speed = 500;
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top - 80;
+          $("html, body").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body id="ground">
+    <!-- ロード画面 -->
+    <div id="loading">
+      <div id="loading_content">
+        <div id="loading_icon"></div>
+        <div id="loading_logo">
+          <h1>RICORA MUSIC TEAM</h1>
+          <h2>〜誰も聴いたことのない最高の音を求めて〜</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- 背景 -->
+    <div id="bg_gradation"></div>
+
+    <!-- フローティングメニュー -->
+    <div id="floatmenu">
+      <table class="floatmenu_table">
+        <tbody>
+          <tr>
+            <td>
+              <div id="top_logo">
+                <h1>RICORA MUSIC TEAM</h1>
+                <h2>〜誰も聴いたことのない最高の音を求めて〜</h2>
+              </div>
+            </td>
+            <td>
+              <a href="#top" class="afloatmenu">Top</a>
+            </td>
+            <td>
+              <a href="#informationtop" class="afloatmenu">CD Information</a>
+            </td>
+            <td>
+              <a href="#tracklisttop" class="afloatmenu">Tracklist</a>
+            </td>
+            <td>
+              <a href="#credittop" class="afloatmenu">Credit</a>
+            </td>
+            <td class="td_right">
+              <div id="menu_right">
+                <a href="/neon_sign/neon_sign.html" class="afloatmenu"
+                  >同時頒布「NeonSign」</a
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- トップ -->
+    <div id="top">
+      <div id="title_bg"></div>
+      <div id="title_text"></div>
+    </div>
+
+    <!-- CD情報 -->
+    <div id="informationtop" class="subtitle">CD Information</div>
+
+    <div id="information">
+      <div id="information_contents" class="clearfix">
+        <div class="information_left">
+          <img src="images/jacket.png" />
+        </div>
+        <div class="information_right">
+          <table class="information_table">
+            <tbody>
+              <tr>
+                <td>Title</td>
+                <th>Insomnia</th>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <th>RICORA MUSIC TEAM</th>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <th>500 yen</th>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <th>2019/10/27</th>
+              </tr>
+              <tr>
+                <td>Place</td>
+                <th>東京流通センター 第一展示場 J-22b</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- トラックリスト -->
+    <div id="tracklisttop" class="subtitle">TrackList</div>
+
+    <div id="tracklist">
+      <dl>
+        <dt><span>TRACK1</span>Boring Days</dt>
+        <dd>May</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK2</span>Night owl</dt>
+        <dd>ろんぽう</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK3</span>Sunrise</dt>
+        <dd>U.E.</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK4</span>Hazy Sight</dt>
+        <dd>TARARO</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK5</span>Broken Memory</dt>
+        <dd>TARARO</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK6</span>or</dt>
+        <dd>平野真司</dd>
+      </dl>
+      <dl>
+        <dt><span>TRACK7</span>Dawn</dt>
+        <dd>Apricot</dd>
+      </dl>
+    </div>
+
+    <!-- SoundCloudプレイヤー -->
+    <div id="soundcloudplayer">
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/695885221&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+    </div>
+
+    <!-- クレジット -->
+    <div id="credittop" class="subtitle">Credit</div>
+
+    <div id="credit">
+      <div id="credit_contents" class="clearfix">
+        <p>Compose</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>May</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>ろんぽう</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>U.E.</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>TARARO</dt>
+            <dd>
+              <a
+                href="https://twitter.com/tararo_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/tararo1234"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>平野真司</dt>
+            <dd></dd>
+          </dl>
+          <dl>
+            <dt>Apricot</dt>
+            <dd>
+              <a
+                href="https://twitter.com/yu_itsuse"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/yu_itsuse"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Mastering</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>TARARO</dt>
+            <dd>
+              <a
+                href="https://twitter.com/tararo_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/tararo1234"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Design</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>CaibeR</dt>
+            <dd>
+              <a
+                href="https://twitter.com/CaiberMAKISE"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/user-454982939"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Web</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>TARARO</dt>
+            <dd>
+              <a
+                href="https://twitter.com/tararo_"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://soundcloud.com/tararo1234"
+                target="_blank"
+                class="soundcloud-link"
+                ><i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div id="credit_contents" class="clearfix">
+        <p>Produce</p>
+        <div id="credit_namelist">
+          <dl>
+            <dt>RICORA MUSIC TEAM</dt>
+            <dd>
+              <a
+                href="https://twitter.com/ricora_dtm_dj"
+                target="_blank"
+                class="twitter-link"
+                ><i class="fab fa-twitter fa-fw" aria-hidden="true"></i
+              ></a>
+              <a href="/index.html" class="web-link"
+                ><i class="fas fa-link fa-fw" aria-hidden="true"></i
+              ></a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- バナー -->
+    <div id="banner">
+      <a href="/insomnia/insomnia.html"
+        ><img src="images/banner.png" width="30%"
+      /></a>
+      <br />
+      <a
+        href="https://twitter.com/share"
+        class="twitter-share-button"
+        data-via="ricora_dtm_dj"
+        data-lang="ja"
+        data-hashtags="riddlecolorofrainbow"
+        >ツイート</a
+      >
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? "http" : "https";
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "twitter-wjs");
+      </script>
+      <p>&copy; 2019 RICORA MUSIC TEAM All Rights Reserved.</p>
+    </div>
+  </body>
+</html>
