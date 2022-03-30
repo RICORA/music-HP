@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=1080, user-scalable=yes,">
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-script-Type" content="text/javascript">
+<link rel="stylesheet" type="text/css" href="hisus.css">
+<title>HISUS &#45; Ricora Music Team</title>
+
+<script type="text/javascript" src="smoothscroll.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
+var bubbles=66; // maximum number of bubbles on screen
+var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+
+/****************************
+* JavaScript Bubble Cursor  *
+*(c)2010-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var bubb=new Array();
+var bubbx=new Array();
+var bubby=new Array();
+var bubbs=new Array();
+var sploosh=false;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(buble);
+
+function buble() { if (document.getElementById) {
+  var i, rats, div;
+  for (i=0; i<bubbles; i++) {
+    rats=createDiv("3px", "3px");
+    rats.style.visibility="hidden";
+	rats.style.zIndex=(over_or_under=="over")?"1001":"0";
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.top="1px";
+    div.left="0px";
+    div.bottom="1px";
+    div.right="0px";
+    div.borderLeft="1px solid "+colours[3];
+    div.borderRight="1px solid "+colours[1];
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.top="0px";
+    div.left="1px";
+    div.right="1px";
+    div.bottom="0px"
+    div.borderTop="1px solid "+colours[0];
+    div.borderBottom="1px solid "+colours[2];
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.left="1px";
+    div.right="1px";
+    div.bottom="1px";
+    div.top="1px";
+    div.backgroundColor=colours[4];
+    if (navigator.appName=="Microsoft Internet Explorer") div.filter="alpha(opacity=50)";
+    else div.opacity=0.5;
+    document.body.appendChild(rats);
+    bubb[i]=rats.style;
+  }
+  set_scroll();
+  set_width();
+  bubble();
+}}
+
+function bubble() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<bubbles; c++) if (!bubby[c]) {
+      bubb[c].left=(bubbx[c]=x)+"px";
+      bubb[c].top=(bubby[c]=y-3)+"px";
+      bubb[c].width="3px";
+      bubb[c].height="3px"
+      bubb[c].visibility="visible";
+      bubbs[c]=3;
+      break;
+    }
+  }
+  for (c=0; c<bubbles; c++) if (bubby[c]) update_bubb(c);
+  setTimeout("bubble()", 40);
+}
+
+document.onmousedown=splash;
+document.onmouseup=function(){clearTimeout(sploosh);};
+
+function splash() {
+  ox=-1;
+  oy=-1;
+  sploosh=setTimeout('splash()', 100);
+}
+
+function update_bubb(i) {
+  if (bubby[i]) {
+    bubby[i]-=bubbs[i]/2+i%2;
+    bubbx[i]+=(i%5-2)/5;
+    if (bubby[i]>sdown && bubbx[i]>sleft && bubbx[i]<sleft+swide+bubbs[i]) {
+	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+		bubb[i].width=bubbs[i]+"px";
+		bubb[i].height=bubbs[i]+"px";
+	  }
+      bubb[i].top=bubby[i]+"px";
+      bubb[i].left=bubbx[i]+"px";
+    }
+    else {
+      bubb[i].visibility="hidden";
+      bubby[i]=0;
+      return;
+    }
+  }
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+</head>
+
+<body bgcolor = #00000 topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+
+<center>
+
+<div id="twitter">
+<a href="#infromation_back"><img src="img/top.bmp" /></a>
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="/hisus_tokusetsu/hisus.html"></a></p>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+ </div>
+
+<div id="infromation_back">
+
+ <div id="information_title">
+	<font color="#F0F0F0">Information</font>
+ </div>
+
+<div id="information_data">
+
+<div align="center">
+<table border= 0 width="1100px" style="text-align:left;">
+<tbody>
+
+<tr><td rowspan=5 align=right><div id="jacket"><a href="#xfd_back"><img src="img/hisus_jacket.png" /></a></div></td>
+
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbspTitle �\�\�\�\�\ H I S U S</td></tr>
+
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbspLabel �\�\�\�\�\�\ RICORA MUSIC TEAM</td></tr>
+
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbspDate �\�\�\�\�\�\�\ 2014/10/26(��)</td></tr>
+
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbspEvent Space �\�\�\ <span style="letter-spacing:-2px;">M3 �������ʃZ���^�[(TRC)�@���W����  �P-06a</span></td></tr>
+
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbspPrise �\�\�\�\�\ 500 yen</td></tr>
+ </tbody>
+ </table>
+ </div>
+
+</div>
+
+ <div id="information_line" />
+ </div>
+</div>
+
+<div id="xfd_back">
+
+ <div id="xfd_title">
+	<font color="#F0F0F0">Crossfade Demo</font>
+ </div>
+  <div id="xfd_sc">
+	<iframe width="1000px" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170749485%3Fsecret_token%3Ds-HT8Rw&amp;color=05376a&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+ </div>
+ <div id="information_line" />
+ </div>
+</div>
+
+<div id="tracklist_back">
+
+ <div id="tracklist_title">
+	<font color="#F0F0F0">Tracklist</font>
+ </div>
+<div id="tracklist">
+
+<div align="center">
+<table width="1000px" border=0 style="text-align:left;">
+<tbody>
+<tr><td style="text-align:left;">����01.&nbsp<font size="5">HISUS</font><br>
+	<font size="4" color="#00BF96" style="margin-left:80pt">�� sora ��</font><br></td>
+<td style=";text-align:left;">����10.&nbsp<font size="5">kanata</font><br>
+	<font size="4" color="#00BF96" style="margin-left:80pt">�� lan. ��</font><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp����02.&nbsp <span style="letter-spacing:-2px;"><font size="5">��轁A�����͐_�ЂɎ��肵�����̏���</font></span><br>
+	<a href="https://soundcloud.com/relite-1" target="_blank"><font size="4" color="#00BF96" style="margin-left:90pt">�� K.RELITE ��</font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp���\11.&nbsp<font size="5">�������̍�</font><br>
+	<a href="https://soundcloud.com/moz-nektar" target="_blank"><font size="4" color="#00BF96" style="margin-left:90pt">�� Moz(Nektar) ��</font></a><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp����03.&nbsp<font size="5">����Ԃꂢ��</font><br>
+	<a href="https://soundcloud.com/zyuuziro" target="_blank"><font size="4" color="#00BF96" style="margin-left:100pt">�� �͂�؂� ��</font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp���\12.&nbsp<font size="5">Amphibious Assault</font><br>
+	<font size="4" color="#00BF96" style="margin-left:100pt">�� fel_u ��</font><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp&nbsp����04.&nbsp<font size="5">for 20</font><br>
+	<a href="https://soundcloud.com/newbiebox" target="_blank"><font size="4" color="#00BF96" style="margin-left:110pt">�� ��ҕs�� ��</font><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp���\13.&nbsp<font size="5">�����Č����A��F����</font><br>
+	<font size="4" color="#00BF96" style="margin-left:110pt">�� aurEole ��</font><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp����05.&nbsp<font size="5">Anti-Atheism</font><br>
+	<a href="https://soundcloud.com/moz-nektar" target="_blank"><font size="4" color="#00BF96" style="margin-left:120pt">�� Moz(Nektar) ��</font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp���\14.&nbsp<font size="5">��񂿂�V��Ƃ��Ղ葛��</font><br>
+	<a href="https://soundcloud.com/ricora" target="_blank"><font size="4" color="#00BF96" style="margin-left:120pt">�� �������� ��</font></a><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp����06.&nbsp<font size="5">Violaceus Et Flavum</font><br>
+	<font size="4" color="#00BF96" style="margin-left:130pt">�� ���� vs. �S�� ��</font><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp���\15.&nbsp<font size="5">��������</font><br>
+	<a href="https://soundcloud.com/ejiri" target="_blank"><font size="4" color="#00BF96" style="margin-left:130pt">�� ������ ��</font></a><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp����07.&nbsp<font size="5">Emotional instability</font><br>
+	<a href="https://soundcloud.com/3131m47o" target="_blank"><font size="4" color="#00BF96" style="margin-left:140pt">�� 3B![v]47O �� </font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp���\16.&nbsp<font size="5">micro box</font><br>
+	<a href="https://soundcloud.com/amekan" target="_blank"><font size="4" color="#00BF96" style="margin-left:140pt">�� ���� ��</font></a><br>
+	<br></td></tr>
+
+<tr><td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp����08.&nbsp<font size="5">Praying to the deity</font><br>
+	<a href="https://soundcloud.com/hino-isuka" target="_blank"><font size="4" color="#00BF96" style="margin-left:150pt">�� �ŔT�C�X�J ��</font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp���\17.&nbsp<font size="5">�H�̋O��</font><br>
+	<a href="http://bbw.sakura.ne.jp/" target="_blank"><font size="4" color="#00BF96" style="margin-left:150pt">�� Belle. ��</font></a><br>
+	<br></td></tr>
+
+<tr><td style=text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp����09.&nbsp<font size="5">Stars on Stage</font><br>
+	<a href="https://soundcloud.com/dleta" target="_blank"><font size="4" color="#00BF96" style="margin-left:160pt">�� delta ��</font></a><br>
+	<br></td>
+<td style="text-align:left;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp���\18.&nbsp<font size="5">�Ă̓��̐���ւ̒ǉ�</font><br>
+	<font size="4" color="#00BF96" style="margin-left:160pt">�� �K���䂤�� ��</font><br>
+	<br></td></tr>
+ </tbody>
+ </table>
+ </div>
+
+</div>
+
+<br>
+ <div id="tracklist_bonus">
+	���\Bonustrack.&nbsp<font size="5">Buy��Buy��SONAR - SONAR�Ő��E��ς����� - feat. Yukari & Zunko</font><br>
+	<a href="https://soundcloud.com/keeeeeneko" target="_blank"><font size="4" color="#A60000" style="margin-left:160pt">�� KANEKO ��</font></a><br>
+ </div>
+ <div id="information_line" />
+ </div>
+</div>
+
+<div id="staff_back">
+  <div id="staff_title">
+	<font color="#F0F0F0">Staff</font>
+  </div>
+  <div id="staff">
+	���\�\�\�\�\�\�\�\�\// <font color="39A5DB">Compose & Produce</font> //�\�\�\�\�\�\�\�\�\��<br>
+	RICORA MUSIC TEAM<br>
+	���\�\�\�\�\�\�\�\�\// <font color="39A5DB"> Mastering</font> //�\�\�\�\�\�\�\�\�\��<br>
+	�����`���[���b�v<br>
+	���\�\�\�\�\�\�\�\�\//  <font color="39A5DB">Design & Artwork</font> //�\�\�\�\�\�\�\�\�\��<br>
+	�G���^��<br>
+ </div>
+</div>
+
+<div id="banner">
+
+<div id="banner_img">
+	<a href="/hisus_tokusetsu/hisus.html"><img src="img/hisus_banner.bmp"/></a>
+</div>
+<img src="img/qr.png" width="80" height="80">
+<p><font size="3" color=#F0F0F0>/hisus_tokustsu/img/hisus_banner.bmp</font></p>
+<p><font size="3" color=#F0F0F0>&copy 2014 RICORA MUSIC TEAM All Rights Researved. </font></p>
+</div>
+</center>
+</body>
+</html>

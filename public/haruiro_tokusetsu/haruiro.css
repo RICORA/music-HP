@@ -1,0 +1,220 @@
+body{
+	margin-top:-10px;
+	margin-bottom: -10px;
+	background-image: url("pic/back3.png");
+	background-size: cover;
+	/*background-color: #F5C1C7; */
+	color: #f0f0f0;
+	overflow-x: hidden;
+
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #FFF,
+	-2px 2px 1px #FFF,
+	2px -2px 1px #FFF,
+	-2px -2px 1px #FFF;
+	font-family: 'Trebuchet MS';
+	color: #438DC1;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link{
+	color: white;
+}
+
+a:hover {
+	color: white;
+	opacity: 1;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: flash;
+	animation-duration: 1s;
+	animation-name: flash;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+a:visited{
+	color: white;
+}
+
+.main{
+	width:1000px;
+	margin: 0 auto;  
+}
+
+#twitter{
+	position: absolute;
+	margin-top: -53px;
+	margin-left: 20px;
+	text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#title_top{
+	background-image: url("pic/title_top.png");
+	width:1000px;
+	height: 75px;
+	margin: 0 auto;
+	margin-top: 10px; 
+	box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+}
+
+#title{
+	background-image: url("pic/title.png");
+	width:1000px;
+	height: 500px;
+	margin: 0 auto;
+	box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+}
+
+ul{
+	margin-left: -40px;
+	margin-top: -17px;
+}
+
+ul#menu li {
+	float: left;
+	width: 200px;
+	height: 59px;
+	overflow: hidden;
+}
+
+.main2{
+	background-image: url("pic/back2.png");
+	background-repeat: repeat-y;
+	width:1000px;
+	height:100%;
+	box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+}
+
+#contents{
+	width: 1000px;
+	height: 100%;
+
+}
+
+#top_ex{
+	background-image: url("pic/font.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 39px;
+	color: black;
+	font-family: "HGS–¾’©E";
+}
+
+#tracklist{
+	background-image: url("pic/back4.png");
+	display:none;
+	font-size: 22px;
+	line-height: 36px;
+
+}
+
+#xfd{
+	background-image: url("pic/back4.png");
+	display:none;
+	text-align: center;
+	width: 1000px;
+	font-size: 30px;
+}
+
+#info{
+	background-image: url("pic/back4.png");
+	display:none;
+	font-size: 25px;
+	line-height: 50px;
+
+}
+
+#omake{
+	display:none;
+	background-image: url("pic/back4.png");
+}
+
+#c{
+	font-size: 15px;
+	text-align: center;
+
+}
+
+#menu_list{
+	width:1000px;
+	height:59px;
+	box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 0px 10px -3px rgba(0,0,0,0.3), -5px 0px 10px -3px rgba(0,0,0,0.3);
+
+}
+
+.modal-content {
+    position:fixed;
+    display:none;
+    z-index:2;
+    width:50%;
+    margin:0 auto;
+    padding:20px 0px 20px 30px;
+    border:2px solid #aaa;
+    background-color:rgba(0,0,0,0.75);
+}
+ 
+.modal-content p {
+    margin:0;
+    padding:0;
+    color: white;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.modal-overlay {
+    z-index:1;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba(0,0,0,0.75);
+}
+ 
+.modal-open {
+   color:white;
+   text-decoration:none;
+}
+ 
+.modal-open:hover {
+    cursor:pointer;
+    color:white;
+}
+ 
+.modal-close {
+    color:white;
+    text-align: right;
+    text-decoration:none;
+}
+	 
+.modal-close:hover {
+    cursor:pointer;
+    color:white;
+}

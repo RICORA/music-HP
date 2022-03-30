@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+body{
+  /*background-position: 0% 0%;*/
+  /*padding: 0px 0px 0px;*/
+  margin: 0px;
+  padding : 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+@media (max-width: 1024px){
+    body{
+        width: 1024px
+    }
+}
+
+#top {
+    background: #FFF url("image/jacket.png") no-repeat scroll center top / cover;
+}
+
+#information {
+    border-top: 0px;
+    border-bottom: 0px;
+    background-color: #101d17;
+    /*padding: 10px 10px 10px;*/
+    padding-top : 0px;
+    margin: 0px;
+    text-align: center;
+    /*margin: 0px 0px 0px;*/
+}
+
+.infotable {
+    display: block;
+    margin-top: 50px;
+    border-spacing: 20px 5px;
+    /*width: 30%;*/
+    /*border-collapse: separate;*/
+    font-family: Meiryo;
+    font-size: 14px;
+    font-size: 1.2rem;
+}
+
+
+
+#tracklist {
+    padding-top: 40px;
+    border-top: 10px;
+    border-bottom: 0px;
+    background-color: #231e34;
+    /*padding: 10px 10px 10px;*/
+    padding-top : 0px;
+    margin: 0px;
+    text-align: center;
+    float: center;
+    /*margin: 0px 0px 0px;*/
+}
+
+#credit {
+    background-color: #201d37;
+    padding: 10px 10px 10px;
+    text-align: center;
+}
+
+#content {
+    text-align: center;
+}
+
+
+.ap{
+    position: absolute;
+    margin-top: -600px;
+}
+
+.word_img{
+    height: 550px;
+    width: auto;
+}
+
+.aborder{
+    padding: .2em .25em .15em;
+    border: solid 4.5em #FFFFFF;
+    border-radius: .1em;
+}
+
+.wrap4{
+    background-color: #ffffff;
+}
+
+.info{
+    margin: 0 auto;
+    width: 750px;
+}
+
+.info h1{
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.info p{
+    color: #ffffff
+}
+
+.info h3{
+    text-align: center;
+    color: #ffffff
+}
+
+.img_S {
+    height: 330px;
+    width: auto;
+    float: left;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.info_t table{
+    margin: 0;
+}
+
+.info table th{
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+}
+
+.info table td{
+    color: #ffffff;
+    text-align: right;
+}
+
+.info h2{
+    text-align: center;
+}
+
+.info p{
+    text-align: center;
+}
+
+.rist h3{
+    margin: 0;
+    clear: both;
+    text-align: right;
+    padding: 5px;
+}
+
+.rist table{
+    margin: 0 auto;
+}
+
+.rist table th{
+    padding: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+.list_l{
+    float: left;
+    width: 50%;
+}
+
+.list_r{
+    float: right;
+    width: 50%;
+}
+
+.xfade{
+    clear: both;
+}
+
+.no{
+    text-align: right;
+    color: #d4efef;
+}
+
+.artist{
+    text-align: right;
+    width: 200px;
+    font-family: Meiryo;
+    color: #d4dfdf;
+}
+
+.track{
+    text-align: left;
+    width: 200px;
+    font-family: Meiryo;
+    color: #d4dfdf;
+}
+
+.xfade iframe{
+    padding: 50px;
+}
+
+.tw, .sc, .ho{
+    margin: 0 auto;
+    /*width: 20px;*/
+    width: 20%;
+    /*padding: 3px;*/
+    padding-left: 0px;
+    padding-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.tw{
+    background-color: #55acee
+}
+
+.sc{
+    background-color: #ff8800
+}
+
+.ho{
+    background-color: #D90021
+}
+
+.tw a:link{
+    color: #ffffff;
+}
+
+.sc a:link{
+    color: #ffffff;
+}
+
+.ho a:link{
+    color: #ffffff;
+}
+
+.tw a:visited{
+    color: #ffffff;
+}
+
+.sc a:visited{
+    color: #ffffff;
+}
+
+.ho a:visited{
+    color: #ffffff;
+}
+
+.tw a:hover{
+    opacity: 0.3
+}
+
+.sc a:hover{
+    opacity: 0.3
+}
+
+.ho a:hover{
+    opacity: 0.3
+}
+
+.banner{
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 234px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.copy{
+    background-color: #eeeeee
+}
+
+.copy p{
+    margin: 0;
+    color: #666666;
+    text-align: center;
+    padding: 10px;
+}
+.wrap2 p {
+    margin:0;
+}
+
+#b-box {
+    background-color: #0d0015;
+    height: 300px;
+}
+
+.cont {
+    background-color: #460e44; 
+    height: 500px;
+}
+
+span.info {
+    color: #1a98a6;
+    font-family: "Hind",cursive;
+    font-size:14pt;
+}
+
+.d-cont-l {
+    color: #878484;
+    width: 20%;
+    float: left;
+}
+
+.d-cont-r {
+    color: #878484;
+    float: right;
+    height: auto;
+}
+
+p.staff{
+    color: #663366;
+    font-family: "Hind",cursive;
+    font-size:10pt;
+}
+.c1 {
+    text-align:right;
+    width: 3%;
+    padding-right: 10px;
+    vertical-align:top;
+}
+.c1 span {
+    padding:3px 5px;
+    color:#fff;
+    background: #efa2cc;
+}
+.c2 {
+    text-align: left;
+    width: 5%;
+    color: #efa2cc;
+}
+.c2 span {
+    font-size: 80%;
+}
+
+.credittable table{
+    margin: 0 auto;
+}
+
+.credittable {
+    width: 30%;
+    margin: 0 auto;
+}
+.credittable td {
+    padding-bottom: 10px;
+}
+
+.credit{
+    color: #efa2cc;
+}
+
+
+.composer {
+    /*color: white;
+    -webkit-text-stroke: 1.2px gray;*/
+    font-size: 10px;
+    font-size: 1.0rem;
+    color: rgb(255, 255, 245);
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.composer2 {
+    /*-webkit-text-stroke: 1.0px black;*/
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    font-family: Meiryo;
+    display: block;
+}
+
+.composer3 {
+    /*color: white;
+    -webkit-text-stroke: 1.2px gray;*/
+    font-size: 5px;
+    font-size: 1.0rem;
+    color: rgb(255, 255, 245);
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.composer4 {
+    /*-webkit-text-stroke: 1.0px black;*/
+    font-size: 12px;
+    font-weight: 2000;
+    color: white;
+    font-family: Meiryo;
+    display: block;
+}
+
+
+.credittable {
+    text-align: center;
+    border-spacing: 50px 10px;
+}
+
+.credittable th {
+    font-family: Meiryo;
+    color: white;
+    font-size: 20px;
+    font-size: 2.0rem;
+    padding-top: 30px;
+    margin: 0px;
+}
+
+
+.cp_button03 {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 240px;
+	padding: 0.90em;
+	line-height: 0.1;
+	cursor: default;
+	user-select: none;
+	transition: color 0.4s, transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	color: #52c11f;
+	border: 1px solid #52c11f;
+	border-radius: 0;
+	background: transparent;
+}
+
+
+.jacket {
+    float: left;
+    padding-left: 10%;
+}
+
+.dropout {
+    margin: 0;
+    padding: 0;
+    font-family: Meiryo;
+    color: #b4bfcf;
+}
+
+
+.large_dropout {
+    margin: 0;
+    padding: 0;
+    font-family: Impact;
+    color: #e4efef;
+}
+
+
+.subtitle {
+    margin: 0;
+    padding: 0;
+    font-family: Meiryo;
+    color: #a497df;
+}
+
+.word {
+    font-family: "HGP明朝E";
+    color: #d4dfbf;
+    font-weight: 500;
+    text-align: center;
+}
+

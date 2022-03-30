@@ -1,0 +1,199 @@
+body {
+    background-image:url(image/no-word-jacket.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    /*background-position: 0% 0%;*/
+    background-attachment:fixed;
+    /*padding: 0px 0px 0px;*/
+    background-position: center center;
+    margin: 0px;
+    padding : 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#top {
+    margin : 0;
+    padding: 0;
+    /*display: inline;*/
+    /*padding: 0px 0px 0px;*/
+    /*margin: 0px 0px 0px;*/
+    /*border-top: 0px;*/
+    /*border-bottom: 0px;*/
+}
+
+#information {
+    border-top: 0px;
+    border-bottom: 0px;
+    background-color: #201d37;
+    /*padding: 10px 10px 10px;*/
+    padding-top : 1px;
+    margin: 0px;
+    /*margin: 0px 0px 0px;*/
+}
+
+#tracklist {
+    background-color: rgba(22, 22, 52, 0.8);
+    /*background-color: rgba(0,0,0,0.6);*/
+    /*filter:alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;*/
+    text-align: center;
+    /*padding-top: 10px;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    clear:both;
+}
+
+#credit {
+    background-color: #201d37;
+    padding: 10px 10px 10px;
+}
+
+#banner {
+    text-align: center;
+    padding: 30px 10px 50px;
+    background-color: rgb(93, 93, 93);
+    color: white;
+}
+
+.word {
+    font-family: Meiryo;
+    color: #a49fbf;
+    font-weight: 500;
+    text-align: center;
+}
+
+H1 {
+    margin: 0;
+    font-family: Meiryo;
+    /*color: #4991fc;*/
+    text-align: center;
+    /*-webkit-text-stroke: 1.0px black;*/
+}
+
+.tracklist {
+    list-style-type:none;
+    font-size: 0;
+    margin-bottom: 20px;
+}
+
+.track-no {
+    margin: 0;
+    padding-top : 30px;
+    color: rgb(139, 158, 224);
+    font-size: 10px;
+    font-size: 1.0rem;
+    display:block;
+}
+
+.track-title {
+    color: black;
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    padding: 0px;
+    display:block;
+    margin: 0;
+}
+
+.composer {
+    /*color: white;
+    -webkit-text-stroke: 1.2px gray;*/
+    font-size: 10px;
+    font-size: 1.0rem;
+    color: rgb(255, 255, 245);
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.composer2 {
+    /*-webkit-text-stroke: 1.0px black;*/
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: white;
+    font-family: Meiryo;
+    display: block;
+}
+
+.jacket {
+    float: left;
+    padding-left: 10%;
+}
+
+.infotable {
+    display: block;
+    margin-top: 0px;
+    border-spacing: 20px 5px;
+    /*width: 30%;*/
+    padding-right: 15%;
+    text-align: right;
+    float: right;
+    /*border-collapse: separate;*/
+    font-family: Meiryo;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.infotable th {
+    height: 60px;
+    border-bottom:1px #eee solid;
+    border-color: rgb(222, 241, 127);
+    color: rgb(236, 104, 104);
+}
+
+.infotable td {
+    border-bottom:1px #eee solid;
+    border-color: rgb(104, 233, 103);
+    color: #8787d4;
+}
+
+.footer {
+    width: 460px;
+	height: 30px;
+	padding: 10px;
+    clear: both;
+}
+
+.credittable {
+    text-align: center;
+    border-spacing: 50px 10px;
+}
+
+.credittable th {
+    font-family: Meiryo;
+    color: white;
+    font-size: 20px;
+    font-size: 2.0rem;
+    padding-top: 30px;
+    margin: 0px;
+}
+
+.tw{
+    color: #55acee;
+    margin-right: 10px;
+    font-size: 20px;
+    font-size: 2.0rem;
+}
+
+.sc{
+    color: #ff8800;
+}
+
+#top img {
+    margin: 0px;
+    display: block;
+}
+
+.rainbowword {
+    margin: 0;
+    padding: 0;
+}
+
+.rainbow {
+    margin: 0;
+    padding: 0;
+    font-family: Meiryo;
+}

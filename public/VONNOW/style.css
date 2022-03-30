@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+body{
+	margin: 0;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+@media (max-width: 1024px){
+	body{
+		width: 1024px
+	}
+}
+
+.wrap{
+	background-color: #eeeeee;
+}
+
+.wrap2{
+	background-color: #f19ca7
+}
+
+.wrap3{
+	background-image: url("VONNOW_bg.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: cover;
+}
+
+.wrap4{
+	background-color: #333333;
+}
+
+.menu, .rist, .cre{
+	margin: 0 auto;
+	width: 980px;
+}
+
+.info{
+	margin: 0 auto;
+	width: 750px;
+}
+
+.jacimg{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.menu li a{
+	display: block;
+	padding: 15px;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu li a:link{
+	color: #666666;
+}
+
+.menu li a:visited{
+	color: #666666;
+}
+
+
+.menu li a:hover{
+	opacity: 0.3
+}
+
+.menu ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.menu li{
+	padding: 0;
+	margin: 0 auto;
+	float: left;
+	width: 25%;
+}
+
+.info h1{
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.info p{
+	color: #ffffff
+}
+
+.info h3{
+	text-align: center;
+	color: #ffffff
+}
+
+.img_S {
+	height: 320px;
+	width: auto;
+	float: left;
+	margin-right: 100px;
+	margin-bottom: 40px;
+}
+
+.info_t table{
+	margin: 0;
+}
+
+.info table th{
+	width: 100px;
+	padding: 10px;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+}
+
+.info table td{
+	color: #ffffff;
+	text-align: right;
+}
+
+.info h2{
+	text-align: center;
+}
+
+.info p{
+	text-align: center;
+}
+
+.rist h3{
+	margin: 0;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+
+.rist table{
+	margin: 0 auto;
+}
+
+.rist table th{
+	padding: 10px;
+	font-weight: bold;
+	text-align: left
+}
+
+.list_l{
+	float: left;
+	width: 50%;
+}
+
+.list_r{
+	float: right;
+	width: 50%;
+}
+
+.xfade{
+	clear: both;
+}
+
+.no{
+	text-align: right;
+	color: #ff0000;
+}
+
+.artist{
+	text-align: right;
+}
+
+.xfade iframe{
+	padding: 50px;
+}
+
+.cre h3{
+	margin: 0;
+	color: #ffffff;
+	padding: 5px;
+	text-align: center;
+}
+
+.cre h4{
+	color: #ffffff;
+	text-align: center;
+}
+
+.cre table{
+	margin: 0 auto;
+}
+
+.name{
+	display: block;
+	width: 150px;
+	padding: 3px;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.ricora{
+	display: block;
+	width: 200px;
+	padding: 3px;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.az{
+	display: block;
+	width: 100px;
+	padding: 3px;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tw, .sc, .ho{
+	margin: 0 auto;
+	width: 20px;
+	padding: 3px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tw{
+	background-color: #55acee
+}
+
+.sc{
+	background-color: #ff8800
+}
+
+.ho{
+	background-color: #D90021
+}
+
+.tw a:link{
+	color: #ffffff;
+}
+
+.sc a:link{
+	color: #ffffff;
+}
+
+.ho a:link{
+	color: #ffffff;
+}
+
+.tw a:visited{
+	color: #ffffff;
+}
+
+.sc a:visited{
+	color: #ffffff;
+}
+
+.ho a:visited{
+	color: #ffffff;
+}
+
+.tw a:hover{
+	opacity: 0.3
+}
+
+.sc a:hover{
+	opacity: 0.3
+}
+
+.ho a:hover{
+	opacity: 0.3
+}
+
+.banner{
+	display: block;
+	margin-top: 30px;
+ 	margin-left: auto;
+	margin-right: auto;
+	width: 234px;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.copy{
+	background-color: #eeeeee
+}
+
+.copy p{
+	margin: 0;
+	color: #666666;
+	text-align: center;
+	padding: 10px;
+}

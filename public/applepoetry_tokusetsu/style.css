@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+@media (max-width: 1024px){
+    body{
+        width: 1024px
+    }
+}
+
+#top {
+    padding-top: 1280px;
+    background: #FFF url("image/no-word-jacket.png") no-repeat scroll center top / cover;
+}
+
+.ap{
+    position: absolute;
+    margin-top: -600px;
+}
+
+.word_img{
+    height: 550px;
+    width: auto;
+}
+
+.aborder{
+    padding: .2em .25em .15em;
+    border: solid 4.5em #FFFFFF;
+    border-radius: .1em;
+}
+.wrap3{
+    background-color: #efa2cc;
+    color: white;
+    text-shadow: 0 -1px 1px #e06dab, -1px 0 3px #e06dab, 1px 0 1px #e06dab;
+}
+
+.wrap4{
+    background-color: #ffffff;
+}
+
+.rist{
+    margin: 0 auto;
+    width: 980px;
+}
+
+.info{
+    margin: 0 auto;
+    width: 750px;
+}
+
+.info h1{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.info p{
+    color: #ffffff
+}
+
+.info h3{
+    text-align: center;
+    color: #ffffff
+}
+
+.img_S {
+    height: 340px;
+    width: auto;
+    float: left;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+
+.info_t table{
+    margin: 0;
+}
+
+.info table th{
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+}
+
+.info table td{
+    color: #ffffff;
+    text-align: right;
+}
+
+.info h2{
+    text-align: center;
+}
+
+.info p{
+    text-align: center;
+}
+
+.rist h3{
+    margin: 0;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+
+.rist table{
+    margin: 0 auto;
+}
+
+.rist table th{
+    padding: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+.list_l{
+    float: left;
+    width: 50%;
+}
+
+.list_r{
+    float: right;
+    width: 50%;
+}
+
+.xfade{
+    clear: both;
+}
+
+.no{
+    text-align: right;
+    color: #ff0000;
+}
+
+.artist{
+    text-align: right;
+    width: 200px;
+}
+
+.track{
+    text-align: left;
+    width: 200px;
+}
+
+.xfade iframe{
+    padding: 50px;
+}
+
+.tw, .sc, .ho{
+    margin: 0 auto;
+    /*width: 20px;*/
+    width: 1%;
+    /*padding: 3px;*/
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.tw{
+    background-color: #55acee
+}
+
+.sc{
+    background-color: #ff8800
+}
+
+.ho{
+    background-color: #D90021
+}
+
+.tw a:link{
+    color: #ffffff;
+}
+
+.sc a:link{
+    color: #ffffff;
+}
+
+.ho a:link{
+    color: #ffffff;
+}
+
+.tw a:visited{
+    color: #ffffff;
+}
+
+.sc a:visited{
+    color: #ffffff;
+}
+
+.ho a:visited{
+    color: #ffffff;
+}
+
+.tw a:hover{
+    opacity: 0.3
+}
+
+.sc a:hover{
+    opacity: 0.3
+}
+
+.ho a:hover{
+    opacity: 0.3
+}
+
+.banner{
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 234px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.copy{
+    background-color: #eeeeee
+}
+
+.copy p{
+    margin: 0;
+    color: #666666;
+    text-align: center;
+    padding: 10px;
+}
+.wrap2 p {
+    margin:0;
+}
+
+#b-box {
+    background-color: #fcc7e4;
+    height: 500px;
+}
+
+.cont {
+    width: 900px;
+}
+
+span.info {
+    color: #1a98a6;
+    font-family: "Hind",cursive;
+    font-size:14pt;
+}
+
+.d-cont-l {
+    color: #878484;
+    float: left;
+}
+
+.d-cont-r {
+    color: #878484;
+    float: right;
+    width: 200px;
+    height: auto;
+}
+
+p.staff{
+    color: #663366;
+    font-family: "Hind",cursive;
+    font-size:10pt;
+}
+.c1 {
+    text-align:right;
+    width: 3%;
+    padding-right: 10px;
+    vertical-align:top;
+}
+.c1 span {
+    padding:3px 5px;
+    color:#fff;
+    background: #efa2cc;
+}
+.c2 {
+    text-align: left;
+    width: 5%;
+    color: #efa2cc;
+}
+.c2 span {
+    font-size: 80%;
+}
+
+.credittable table{
+    margin: 0 auto;
+}
+
+.credittable {
+    width: 30%;
+    margin: 0 auto;
+}
+.credittable td {
+    padding-bottom: 10px;
+}
+
+.credit{
+    color: #efa2cc;
+}
